@@ -5,14 +5,6 @@
 2. Recommender Systems and Reinforcement learning
 3. Supervised Learning:
 
-> [!NOTE]
-> Terminology:
-> - Training Set: Data used to train the model
-> - x: Notation to denote Input variable (also called feature variable)
-> - y: Notation to denote Output variable: y (output/target variable)
-> - m: Number of training examples
-> - (x,y): Notation to denote a Single training example
-
 ### Supervised Learning:
 - Algorithms that learn from being given right answers X (Input) -> Y (Output) mappings i.e. input -> output labels
   - This way of learning is done by providing the right answers for model to learn
@@ -36,6 +28,14 @@
   - Regression is predicting a specific number. This number is not part of a discrete values but rather predict a continuous variable
     - Predict stock price
     - Housing price prediction based on sqft, no of rooms etc
+
+> [!NOTE]
+> Terminology:
+> - **Training Set**: Data used to train the model
+> - **x**: Notation to denote **Input** variable (also called **feature** variable)
+> - **y**: Notation to denote **Output** variable (also called **target** variable)
+> - **m**: Number of training examples
+> - **(x, y)**: Notation to denote a Single training example
 
 #### Linear Regression Models 
 - House prices vs Size
