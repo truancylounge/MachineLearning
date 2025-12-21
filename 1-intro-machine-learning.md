@@ -28,8 +28,8 @@
     - Predict stock price
     - Housing price prediction based on sqft, no of rooms etc
 
-```markdown
-Math formula
+```math
+Formula
 $$f_{w,b}(x) = wx + b$$
 ```
 
