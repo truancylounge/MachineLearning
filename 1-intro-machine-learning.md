@@ -3,7 +3,6 @@
 ## Key Concepts
 1. Supervised Learning vs Unsupervised Learning
 2. Recommender Systems and Reinforcement learning
-3. Supervised Learning:
 
 ### Supervised Learning:
 - Algorithms that learn from being given right answers X (Input) -> Y (Output) mappings i.e. input -> output labels
@@ -28,6 +27,9 @@
   - Regression is predicting a specific number. This number is not part of a discrete values but rather predict a continuous variable
     - Predict stock price
     - Housing price prediction based on sqft, no of rooms etc
+
+Math formula
+$$f_{w,b}(x) = wx + b$$
 
 > [!NOTE]
 > Terminology:
