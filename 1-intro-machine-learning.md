@@ -29,7 +29,6 @@
     - Housing price prediction based on sqft, no of rooms etc
 
 ```math
-Formula
 $$f_{w,b}(x) = wx + b$$
 ```
 
