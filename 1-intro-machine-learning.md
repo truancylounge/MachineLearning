@@ -1,19 +1,3 @@
-
-> [!NOTE]  
-> Highlights information that users should take into account, even when skimming.
-
-> [!TIP]
-> Optional information to help a user be more successful.
-
-> [!IMPORTANT]  
-> Crucial information necessary for users to succeed.
-
-> [!WARNING]  
-> Critical content demanding immediate user attention due to potential risks.
-
-> [!CAUTION]
-> Negative potential consequences of an action.
-
 # Intro to Machine Learning
 
 ## Key Concepts
@@ -21,6 +5,13 @@
 2. Recommender Systems and Reinforcement learning
 3. Supervised Learning:
 
+> [!NOTE]
+> Terminology:
+> - Training Set: Data used to train the model
+> - x: Notation to denote Input variable (also called feature variable)
+> - y: Notation to denote Output variable: y (output/target variable)
+> - m: Number of training examples
+> - (x,y): Notation to denote a Single training example
 
 ### Supervised Learning:
 - Algorithms that learn from being given right answers X (Input) -> Y (Output) mappings i.e. input -> output labels
@@ -45,12 +36,7 @@
   - Regression is predicting a specific number. This number is not part of a discrete values but rather predict a continuous variable
     - Predict stock price
     - Housing price prediction based on sqft, no of rooms etc
-> [!NOTE]
-> Useful information that users should know, even when skimming content.
 
-> [!TIP]
-> Training Set
-> Input variable/Feature
 #### Linear Regression Models 
 - House prices vs Size
 - 
