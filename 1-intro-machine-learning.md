@@ -28,8 +28,8 @@
     - Predict stock price
     - Housing price prediction based on sqft, no of rooms etc
 
-**Math Formula**\
-$$f_{w,b}(x) = wx + b$$
+**Learning Algorithm Model Function**\
+$$f_{w,b}(x) = wx + b$$, x is features/inputs, the numbers w and b give us the predicted output ($ \hat{y} $)
 
 
 > [!NOTE]
