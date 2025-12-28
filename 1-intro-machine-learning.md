@@ -8,10 +8,10 @@
 | General Notation    | Description | Python (if applicable)|
 |:--------------------| :--- | :--- |
 | $a$                 |scalar, non bold||
-| $\boldsymbol{a}$    |vector bold||
+| **a**               |vector bold||
 | Regression          |||
 | **x**               |Training example feature values (Size 1000 sqft)|`x_train`|
-| $\mathbf{y}$        |Traininig example targets (Price 1000s of Dollars)|`y_train`|
+| **y**               |Traininig example targets (Price 1000s of Dollars)|`y_train`|
 | $x^{(i)}$,$y^{(i)}$ |$i_{th}$ Training Example|`x_i`, `y_i`|
 | m                   |Number of Training Examples|`m`|
 | $w$                 |parameter: weight|`w`|
