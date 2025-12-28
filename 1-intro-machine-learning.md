@@ -5,18 +5,18 @@
 2. Recommender Systems and Reinforcement learning
 
 ### Terminology
-| General Notation | Description | Python (if applicable)|
-| :--- | :--- | :--- |
-|$a$|scalar, non bold||
-|$\mathbf{a}$|vector bold||
-|Regression|||
-|$\mathbf{x}$|Training example feature values (Size 1000 sqft)|`x_train`|
-|$\mathbf{y}$|Traininig example targets (Price 1000s of Dollars)|`y_train`|
-|$x^{(i)}$,$y^{(i)}$ |$i_{th}$ Training Example|`x_i`, `y_i`|
-|m|Number of Training Examples|`m`|
-|$w$|parameter: weight|`w`|
-|$b$|parameter: bias|`b`|
-|$f_{w,b}(x^{(i)})$|The result of the models evauation at $x^{(i)}$ parameterized by $w,b:f_{w,b}(x^{(i)})=wx^{(i)}+b$|`f_wb`|
+| General Notation    | Description | Python (if applicable)|
+|:--------------------| :--- | :--- |
+| $a$                 |scalar, non bold||
+| $\mathbf a$         |vector bold||
+| Regression          |||
+| $\mathbf{x}$        |Training example feature values (Size 1000 sqft)|`x_train`|
+| $\mathbf{y}$        |Traininig example targets (Price 1000s of Dollars)|`y_train`|
+| $x^{(i)}$,$y^{(i)}$ |$i_{th}$ Training Example|`x_i`, `y_i`|
+| m                   |Number of Training Examples|`m`|
+| $w$                 |parameter: weight|`w`|
+| $b$                 |parameter: bias|`b`|
+| $f_{w,b}(x^{(i)})$  |The result of the models evauation at $x^{(i)}$ parameterized by $w,b:f_{w,b}(x^{(i)})=wx^{(i)}+b$|`f_wb`|
 
 ### Supervised Learning:
 - Algorithms that learn from being given right answers X (Input) -> Y (Output) mappings i.e. input -> output labels
