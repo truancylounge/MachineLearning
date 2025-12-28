@@ -43,7 +43,7 @@
     - Housing price prediction based on sqft, no of rooms etc
 
 > [!NOTE]
-> **Learning Algorithm Model Function**
+> **Learning Algorithm Model Function**: \
 > $$f_{w,b}(x) = wx + b$$, x is features/inputs, the numbers w and b will determine the predicted output ($$\hat{y}$$)
 
 #### Linear Regression Models 
