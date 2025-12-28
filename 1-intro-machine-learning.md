@@ -43,7 +43,7 @@ $$f_{w,b}(x) = wx + b$$, x is features/inputs, the numbers w and b will determin
 #### Linear Regression Models 
 - Linear Regression with one variable (Univariate linear regression)
   ![Univariate Linear Regression v2](docs/content/imgs/concepts/sl-linear-regression-univariate.png)
-  Jupyter Notebook: * [Linear Regression Notebook](./notebooks/supervised-learning/1-linear-regression.ipynb)
+  Model Representation in Jupyter Notebook for [Linear Regression](./notebooks/supervised-learning/1-linear-regression.ipynb)
 
 ### Unsupervised Learning
 - While supervised learning models learn from data labeled with right answer, Unsupervised learning finds patterns from unlabeled data
