@@ -58,10 +58,10 @@ $$J_{w,b}=\frac{1}{2m}\sum_{i=1}^{m}(\hat{y}^{(i)-y^{(i)}})^{2}$$, m = number of
 $$J_{w,b}=\frac{1}{2m}\sum_{i=1}^{m}(f_{w,b}(x^{(i)})-y^{(i)})^{2}$$
 
 > [!NOTE]
-> Model: $f_{w,b}(x) = wx + b$ \
-> Parameters: $w,b$ \
-> Cost Function: $J(w,b) = \frac{1}{2m}\sum_{i=1}^{m}(f_{w,b}(x^{i}) - y^{i})^{2}$ \
-> Objective: minimize $J(w,b)$
+> **Model**: $f_{w,b}(x) = wx + b$ \
+> **Parameters**: $w,b$ \
+> **Cost Function**: $J(w,b) = \frac{1}{2m}\sum_{i=1}^{m}(f_{w,b}(x^{i}) - y^{i})^{2}$ \
+> **Objective**: minimize $J(w,b)$
 
 ![Cost Function: Squared error cost function](docs/content/imgs/concepts/sl-cost-function-v1.png)
 
