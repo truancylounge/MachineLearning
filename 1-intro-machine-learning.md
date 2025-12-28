@@ -59,6 +59,9 @@ $$J_{w,b}=\frac{1}{2m}\sum_{i=1}^{m}(f_{w,b}(x^{(i)})-y^{(i)})^{2}$$
 
 ![Cost Function: Squared error cost function](docs/content/imgs/concepts/sl-cost-function-v1.png)
 
+Example: For this example lets have b = 0, $f_{w}(x) = wx$
+
+![Cost Function Example](docs/content/imgs/concepts/sl-cost-function-v2.png)
 
 ### Unsupervised Learning
 - While supervised learning models learn from data labeled with right answer, Unsupervised learning finds patterns from unlabeled data
