@@ -59,9 +59,14 @@ $$J_{w,b}=\frac{1}{2m}\sum_{i=1}^{m}(f_{w,b}(x^{(i)})-y^{(i)})^{2}$$
 
 ![Cost Function: Squared error cost function](docs/content/imgs/concepts/sl-cost-function-v1.png)
 
-Example: For simplicity lets assume b = 0, $f_{w}(x) = wx$
-Lets compute values with w = [1, 0.5, 0, -0.5], $J(w)$ = [0, 0.58, 2.3, 5.25]. The graphs below show the plots for $f_{w}(x)$ and $J(w)$. The value of $w$ is selected in plot which has lowest $J(w)$.\
-Based on cost function w = 1 is the right selection.
+**Example:** For simplicity lets assume b = 0, $f_{w}(x) = wx$
+```text
+Lets compute values for $w$ = [1, 0.5, 0, -0.5]
+$J(w)$ = [0, 0.58, 2.3, 5.25]
+The graphs below show the plots for $f_{w}(x)$ and $J(w)$.
+The value of $w$ is selected in plot which has lowest $J(w)$.
+$w=1$ is the right weight, since it has the lowest loss i.e $J(w)$
+```
 ![Cost Function Example](docs/content/imgs/concepts/sl-cost-function-v2.png)
 
 ### Unsupervised Learning
