@@ -4,6 +4,20 @@
 1. Supervised Learning vs Unsupervised Learning
 2. Recommender Systems and Reinforcement learning
 
+### Terminology
+| General Notation | Description | Python (if applicable)|
+| :--- | :--- | :--- |
+|$a$|scalar, non bold||
+|$\mathbf{a}$|vector bold||
+|Regression|||
+|$\mathbf{x}$|Training example feature values (Size 1000 sqft)|`x_train`|
+|$\mathbf{y}$|Traininig example targets (Price 1000s of Dollars)|`y_train`|
+|$x^{(i)}$,$y^{(i)}$ |$i_{th}$ Training Example|`x_i`, `y_i`|
+|m|Number of Training Examples|`m`|
+|$w$|parameter: weight|`w`|
+|$b$|parameter: bias|`b`|
+|$f_{w,b}(x^{(i)})$|The result of the models evauation at $x^{(i)}$ parameterized by $w,b:f_{w,b}(x^{(i)})=wx^{(i)}+b$|`f_wb`|
+
 ### Supervised Learning:
 - Algorithms that learn from being given right answers X (Input) -> Y (Output) mappings i.e. input -> output labels
   - This way of learning is done by providing the right answers for model to learn
@@ -30,15 +44,6 @@
 
 **Learning Algorithm Model Function**\
 $$f_{w,b}(x) = wx + b$$, x is features/inputs, the numbers w and b will determine the predicted output ($$\hat{y}$$)
-
-
-> [!NOTE]
-> Terminology:
-> - **Training Set**: Data used to train the model
-> - **x**: Notation to denote **Input** variable (also called **feature** variable)
-> - **y**: Notation to denote **Output** variable (also called **target** variable)
-> - **m**: Number of training examples
-> - **(x, y)**: Notation to denote a Single training example
 
 #### Linear Regression Models 
 - Linear Regression with one variable (Univariate linear regression)
