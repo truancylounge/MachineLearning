@@ -61,7 +61,7 @@ $$J_{w,b}=\frac{1}{2m}\sum_{i=1}^{m}(f_{w,b}(x^{(i)})-y^{(i)})^{2}$$
 
 **Example:** For simplicity lets assume b = 0, $f_{w}(x) = wx$
 ```text
-Lets compute values for $w$ = [1, 0.5, 0, -0.5]
+Lets compute values for $$w$$ = [1, 0.5, 0, -0.5]
 $J(w)$ = [0, 0.58, 2.3, 5.25]
 The graphs below show the plots for $f_{w}(x)$ and $J(w)$.
 The value of $w$ is selected in plot which has lowest $J(w)$.
