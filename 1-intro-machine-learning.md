@@ -51,6 +51,16 @@
   ![Univariate Linear Regression v2](docs/content/imgs/concepts/sl-linear-regression-univariate.png)
 - Linear Regression Single Input [Jupyter Notebook](./notebooks/supervised-learning/1-linear-regression.ipynb)
 
+> [!NOTE]
+> Cost Function: A mathematical tool that quantifies the "badness" or error of a model's prediction, measuring the difference between expected and predicted outputs as single number. \
+> Also called Squared Error Cost Function \
+> $$J_{w,b}=1/2m\sum_{i=1}^{m}(\hat{y}^{(i)-y^{(i)}})^{2}$$, m = number of training examples \
+> $$J_{w,b}=1/2m\sum_{i=1}^{m}(f_{w,b}(x^{(i)})-y^{(i)}})^{2}$$
+> Smaller the values of cost function, 
+
+![Cost Function: Squared error cost function](docs/content/imgs/concepts/sl-cost-function-v1.png)
+
+
 ### Unsupervised Learning
 - While supervised learning models learn from data labeled with right answer, Unsupervised learning finds patterns from unlabeled data
 - In unsupervised learning, data only comes from inputs x but not output labels y. Algorithm has to find structure in the data. 
