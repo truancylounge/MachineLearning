@@ -42,10 +42,12 @@ $$f_{w,b}(x) = wx + b$$, x is features/inputs, the numbers w and b will determin
 
 #### Linear Regression Models 
 - Linear Regression with one variable (Univariate linear regression)
+  v1:
   ![Univariate Linear Regression v1](docs/content/imgs/concepts/sl-linear-regression-univariate-v1.png)
-
+  v2:
   ![Univariate Linear Regression v2](docs/content/imgs/concepts/sl-linear-regression-univariate-v2.png)
-- 
+  Jupyter Notebook: * [Linear Regression Notebook](./notebooks/supervised-learning/1-linear-regression.ipynb)
+
 ### Unsupervised Learning
 - While supervised learning models learn from data labeled with right answer, Unsupervised learning finds patterns from unlabeled data
 - In unsupervised learning, data only comes from inputs x but not output labels y. Algorithm has to find structure in the data. 
@@ -57,5 +59,3 @@ $$f_{w,b}(x) = wx + b$$, x is features/inputs, the numbers w and b will determin
   - Clustering is a common use case of unsupervised learning, e.g. cluster a bunch of documents and as someone looks at a document, you can get related documents in cluster
   - Clustering DNA's of multiple people. We ask the model to map the data and classify different types of people together as Type1, Type2, Type3
   ![Clustering: Unsupervised Learning](./docs/content/imgs/concepts/unsupervised-learning-clustering-dna.png)
-- 
-- 
