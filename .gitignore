@@ -1,0 +1,3 @@
+# ignore all instances across all subdirectories
+**/.virtual_documents/
+**/.ipynb_checkpoints/

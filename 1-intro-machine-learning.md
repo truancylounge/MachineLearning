@@ -29,7 +29,7 @@
     - Housing price prediction based on sqft, no of rooms etc
 
 **Learning Algorithm Model Function**\
-$$f_{w,b}(x) = wx + b$$, x is features/inputs, the numbers w and b give us the predicted output ($$\hat{y}$$)
+$$f_{w,b}(x) = wx + b$$, x is features/inputs, the numbers w and b will determine the predicted output ($$\hat{y}$$)
 
 
 > [!NOTE]
@@ -41,7 +41,10 @@ $$f_{w,b}(x) = wx + b$$, x is features/inputs, the numbers w and b give us the p
 > - **(x, y)**: Notation to denote a Single training example
 
 #### Linear Regression Models 
-- House prices vs Size
+- Linear Regression with one variable (Univariate linear regression)
+  ![Univariate Linear Regression v1](docs/content/imgs/concepts/sl-linear-regression-univariate-v1.png)
+
+  ![Univariate Linear Regression v2](docs/content/imgs/concepts/sl-linear-regression-univariate-v2.png)
 - 
 ### Unsupervised Learning
 - While supervised learning models learn from data labeled with right answer, Unsupervised learning finds patterns from unlabeled data
