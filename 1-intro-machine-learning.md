@@ -74,14 +74,15 @@ $$J_{w,b}=\frac{1}{2m}\sum_{i=1}^{m}(f_{w,b}(x^{(i)})-y^{(i)})^{2}$$
 
 ![Cost Function Example](docs/content/imgs/concepts/sl-cost-function-v2.png)
 
-As $b$ parameter comes into the equation, the graphs we plot are 3-dimensional and a contour plot is one way to find minimal $J(w,b)$, which is at center of smallest ellipse. 
-Example1: w=-0.15, b=800
+As $b$ parameter comes into the equation, the graphs we plot are 3-dimensional and a contour plot is one way to find minimal $J(w,b)$, which is at center of smallest ellipse. \ 
+
+**Example1: w=-0.15, b=800** \
 ![Cost Function Example1](docs/content/imgs/concepts/sl-cost-function-v3.png)
 
-Example2: w=-0, b=360
+**Example2: w=-0, b=360** \
 ![Cost Function Example2](docs/content/imgs/concepts/sl-cost-function-v4.png)
 
-Example3: w=-0.13, b=71 (Minimal Loss)
+**Example3: w=-0.13, b=71 (Minimal Loss)** \
 ![Cost Function Example3](docs/content/imgs/concepts/sl-cost-function-v5.png)
 
 ### Unsupervised Learning
