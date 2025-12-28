@@ -52,11 +52,11 @@
 - Linear Regression Single Input [Jupyter Notebook](./notebooks/supervised-learning/1-linear-regression.ipynb)
 
 > [!NOTE]
-> Cost Function: A mathematical tool that quantifies the "badness" or error of a model's prediction, measuring the difference between expected and predicted outputs as single number. \
+> **Cost Function:** 
+> A mathematical tool that quantifies the "badness" or error of a model's prediction, measuring the difference between expected and predicted outputs as single number. \
 > Also called Squared Error Cost Function \
-> $$J_{w,b}=1/2m\sum_{i=1}^{m}(\hat{y}^{(i)-y^{(i)}})^{2}$$, m = number of training examples \
-> $$J_{w,b}=1/2m\sum_{i=1}^{m}(f_{w,b}(x^{(i)})-y^{(i)}})^{2}$$
-> Smaller the values of cost function, 
+> $$J_{w,b}=\frac{1}{2m}\sum_{i=1}^{m}(\hat{y}^{(i)-y^{(i)}})^{2}$$, m = number of training examples \
+> $$J_{w,b}=\frac{1}{2m}\sum_{i=1}^{m}(f_{w,b}(x^{(i)})-y^{(i)})^{2}$$
 
 ![Cost Function: Squared error cost function](docs/content/imgs/concepts/sl-cost-function-v1.png)
 
