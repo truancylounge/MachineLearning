@@ -8,7 +8,7 @@
 | General Notation | Description | Python (if applicable)|
 | :--- | :--- | :--- |
 |$a$|scalar, non bold||
-|$$\mathbf{a}$$|vector bold||
+|$`\mathbf{a}`$|vector bold||
 |Regression|||
 |$\mathbf{x}$|Training example feature values (Size 1000 sqft)|`x_train`|
 |$\mathbf{y}$|Traininig example targets (Price 1000s of Dollars)|`y_train`|
