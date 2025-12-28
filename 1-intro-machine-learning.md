@@ -5,18 +5,18 @@
 2. Recommender Systems and Reinforcement learning
 
 ### Terminology
-| General Notation    | Description | Python (if applicable)|
-|:--------------------| :--- | :--- |
-| $a$                 |scalar, non bold||
-| **a**               |vector bold||
-| Regression          |||
-| **x**               |Training example feature values (Size 1000 sqft)|`x_train`|
-| **y**               |Traininig example targets (Price 1000s of Dollars)|`y_train`|
-| $x^{(i)}$,$y^{(i)}$ |$i_{th}$ Training Example|`x_i`, `y_i`|
-| m                   |Number of Training Examples|`m`|
-| $w$                 |parameter: weight|`w`|
-| $b$                 |parameter: bias|`b`|
-| $f_{w,b}(x^{(i)})$  |The result of the models evauation at $x^{(i)}$ parameterized by $w,b:f_{w,b}(x^{(i)})=wx^{(i)}+b$|`f_wb`|
+| General Notation     | Description | Python (if applicable)|
+|:---------------------| :--- | :--- |
+| $a$                  |scalar, non bold||
+| **a**                |vector bold||
+| Regression           |||
+| **x**                |Training example feature values (Size 1000 sqft)|`x_train`|
+| **y**                |Traininig example targets (Price 1000s of Dollars)|`y_train`|
+| $x^{(i)}$, $y^{(i)}$ |$i_{th}$ Training Example|`x_i`, `y_i`|
+| m                    |Number of Training Examples|`m`|
+| $w$                  |parameter: weight|`w`|
+| $b$                  |parameter: bias|`b`|
+| $f_{w,b}(x^{(i)})$   |The result of the models evauation at $x^{(i)}$ parameterized by $w,b:f_{w,b}(x^{(i)})=wx^{(i)}+b$|`f_wb`|
 
 ### Supervised Learning:
 - Algorithms that learn from being given right answers X (Input) -> Y (Output) mappings i.e. input -> output labels
@@ -46,7 +46,7 @@
 > **Learning Algorithm Model Function**: \
 > $$f_{w,b}(x) = wx + b$$, x is features/inputs, the numbers w and b will determine the predicted output ($$\hat{y}$$)
 
-#### Linear Regression Models 
+### Linear Regression Models
 - Linear Regression with one variable (Univariate linear regression)
   ![Univariate Linear Regression v2](docs/content/imgs/concepts/sl-linear-regression-univariate.png)
 - Linear Regression Single Input [Jupyter Notebook](./notebooks/supervised-learning/1-linear-regression.ipynb)
