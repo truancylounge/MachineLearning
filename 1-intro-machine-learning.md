@@ -56,7 +56,6 @@
 > A mathematical tool that quantifies the "badness" or error of a model's prediction, measuring the difference between expected and predicted outputs as single number.
 > 
 > $$J_{w,b}=\frac{1}{2m}\sum_{i=1}^{m}(\hat{y}^{(i)-y^{(i)}})^{2}$$, m = number of training examples
-> 
 > $$J_{w,b}=\frac{1}{2m}\sum_{i=1}^{m}(f_{w,b}(x^{(i)})-y^{(i)})^{2}$$
 
 ![Cost Function: Squared error cost function](docs/content/imgs/concepts/sl-cost-function-v1.png)
