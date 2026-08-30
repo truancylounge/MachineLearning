@@ -42,7 +42,7 @@
 - Models don't really understand text they understand numbers. So we need to process text and make it quantifiable for models to consume.
 - More info about [Tokenizers](./ai-research/tokenizers.md).
 - More info about [Token Similarity Algorithms](./ai-research/token-similarity.md)
-- <details>
+<details>
 <summary><b>Why Traditional NLP Uses Cosine Similarity vs. Why Modern Embeddings Use Dot Product</b></summary>
 
 The reason why in traditional NLP we use cosine similarity (i.e., dot product normalized by the magnitudes of vectors) to compare two vectors (Tf-Idf, bag-of-words, LSA, etc.) is because the semantic information is encoded only in the direction of a vector, not in its magnitude.
