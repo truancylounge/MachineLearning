@@ -41,9 +41,23 @@
 ## Tokenization
 - Models don't really understand text they understand numbers. So we need to process text and make it quantifiable for models to consume.
 - More info about [Tokenizers](./ai-research/tokenizers.md).
+- More info about [Token Similarity Algorithms](./ai-research/token-similarity.md)
+- <details>
+<summary><b>Why Traditional NLP Uses Cosine Similarity vs. Why Modern Embeddings Use Dot Product</b></summary>
+
+The reason why in traditional NLP we use cosine similarity (i.e., dot product normalized by the magnitudes of vectors) to compare two vectors (Tf-Idf, bag-of-words, LSA, etc.) is because the semantic information is encoded only in the direction of a vector, not in its magnitude.
+
+The magnitude mainly reflects how much text or how frequent the words are, not what the text is about. For example, the vectors $a = (1, 1)$ and $b = (10, 10)$ point in exactly the same direction, so they represent the same semantic proportions, even though $b$ is $10\times$ larger. In those cases, longer documents or more frequent words produce vectors with larger norms, but that does not mean they are more semantically similar. Without normalization, the dot product would be dominated by length and frequency rather than meaning. Therefore, cosine similarity removes this bias by normalizing the vectors.
+
+By contrast, when we compare word/token embeddings (e.g., Transformer attention) we prefer the raw dot product because both components are informative:
+* **Direction:** Semantically related tokens have a similar direction (higher dot products).
+* **Magnitude:** The model can encode importance or intensity in the vector norm (larger vectors exert stronger influence in attention).
+
+</details>
+
 - As these tokens are generated we need to represent these tokens (word representation). **Cosine Similarity** is used to check how close in  meaning different tokens are to each other
-  - **One hot Encoding (OHE)**
+  - **One Hot Encoding (OHE)**
     - With One hot encoding when we represent tokens they will be orthogonal to each other i.e. we can't figure out similarity between tokens
-    - Ideally we want tokens with similar meaning to have small angle
+    - 
   - 
          
