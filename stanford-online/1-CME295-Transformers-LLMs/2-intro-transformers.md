@@ -32,6 +32,8 @@
               A lazy model that predicts **negative** for **every single review** would score 95% Accuracy, looks great on first glance but the model never correctly identified a positive review.
               This is why Accuracy alone is very dangerous on imbalanced data.
 ## Tokenization
+- Models don't really understand text they understand numbers. So we need to process text and make it quantifiable for models to consume.
+- More info about [Tokenizers](./ai-research/tokenizers.md).
 
 > [!NOTE]
 > **Cosine Similarity Summary:**
@@ -39,8 +41,6 @@
 > * **Opposite meaning:** Angle near 180 $\rightarrow$ Cosine similarity near -1
 > * **Unrelated meaning:** Angle near 90 $\rightarrow$ Cosine similarity near 0
 
-- Models don't really understand text they understand numbers. So we need to process text and make it quantifiable for models to consume.
-- More info about [Tokenizers](./ai-research/tokenizers.md).
 - As these tokens are generated we need to represent these tokens (word representation). **Cosine Similarity** is used to check how close in  meaning different tokens are to each other
   - **One hot Encoding (OHE)**
     - With One hot encoding when we represent tokens they will be orthogonal to each other i.e. we can't figure out similarity between tokens
