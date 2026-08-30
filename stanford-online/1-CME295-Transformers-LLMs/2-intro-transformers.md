@@ -33,5 +33,5 @@
               This is why Accuracy alone is very dangerous on imbalanced data.
 ## Tokenization
 - Models don't really understand text they understand numbers. So we need to process text and make it quantifiable for models to consume.
-- More info about Tokenization [GitHub Pages](./ai-research/1-Tokenization.md).
+- More info about [Tokenization](./ai-research/1-Tokenization.md).
          
