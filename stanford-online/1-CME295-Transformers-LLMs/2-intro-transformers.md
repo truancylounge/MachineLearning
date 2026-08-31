@@ -40,8 +40,16 @@
 
 ## Tokenization
 - Models don't really understand text they understand numbers. So we need to process text and make it quantifiable for models to consume.
-- More info about [Tokenizers](./ai-research/tokenizers.md).
-- More info about [Token Similarity Algorithms](./ai-research/token-similarity.md)
+- Info [Tokenizers](./ai-research/tokenizers.md).
+- Info [Token Similarity Algorithms](./ai-research/token-similarity.md)
+- Traditional NLP we use cosine similarity and not dot product normalized by the magnitudes of vectors to compare two vectors (Tf-Idf, bag-of-words, LSA, etc.) is because the semantic information is encoded only in the direction of a vector, not in its magnitude.
+- As these tokens are generated we need to represent these tokens (word representation). **Cosine Similarity** is used to check how close in  meaning different tokens are to each other
+  - **One Hot Encoding (OHE)**
+    - With One hot encoding when we represent tokens they will be orthogonal to each other i.e. we can't figure out similarity between tokens
+  - Word2Vec
+- Info [Embeddings/ Generate Word Representations](./ai-research/token-embedding-generation.md)
+
+## Interesting Discussions
 <details>
 <summary><b>Why Traditional NLP Uses Cosine Similarity vs. Why Modern Embeddings Use Dot Product</b></summary>
 
@@ -52,12 +60,5 @@ The magnitude mainly reflects how much text or how frequent the words are, not w
 By contrast, when we compare word/token embeddings (e.g., Transformer attention) we prefer the raw dot product because both components are informative:
 * **Direction:** Semantically related tokens have a similar direction (higher dot products).
 * **Magnitude:** The model can encode importance or intensity in the vector norm (larger vectors exert stronger influence in attention).
-
 </details>
 
-- As these tokens are generated we need to represent these tokens (word representation). **Cosine Similarity** is used to check how close in  meaning different tokens are to each other
-  - **One Hot Encoding (OHE)**
-    - With One hot encoding when we represent tokens they will be orthogonal to each other i.e. we can't figure out similarity between tokens
-    - 
-  - 
-         
