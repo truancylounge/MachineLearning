@@ -40,6 +40,68 @@ $$PE_{(pos, 2i)} = \sin\left(\frac{pos}{10000^{2i/d_{model}}}\right) \qquad PE_{
 
 Where `pos` is the token's position (0, 1, 2, ... 7 for our 8 tokens) and `i` indexes the embedding dimension. This produces a unique wave-pattern "fingerprint" per position that the model can learn to interpret. (Many modern models — GPT, BERT — instead use a **learned** positional embedding table, exactly like the word embedding table, and just add it in. Either way, the *purpose* is identical.)
 
+### Sinusoidal Positional Encoding Example
+This is describing the classic **sinusoidal positional encoding** formula from the original Transformer paper ("Attention Is All You Need"). Let me break down exactly what `pos` and `i` mean and how they fit into the full formula.
+
+## The full formula, for context
+
+```
+PE(pos, 2i)   = sin(pos / 10000^(2i/d_model))
+PE(pos, 2i+1) = cos(pos / 10000^(2i/d_model))
+```
+
+## What `pos` means
+
+`pos` is simply **which token slot this is in the sequence** — its position, counting from 0.
+
+If your sentence has 8 tokens:
+```
+"The" "cat" "sat" "on" "the" "warm" "mat" "today"
+ 0     1     2     3    4     5      6     7
+```
+Then `pos = 0` for "The", `pos = 1` for "cat", ... up through `pos = 7` for "today". This is just an index into the sequence — nothing fancy, just "which word number is this."
+
+## What `i` means
+
+`i` indexes **which pair of dimensions** within a single token's embedding vector you're computing a value for.
+
+Say each token's embedding has `d_model = 512` dimensions (a typical size). The formula generates values in **pairs** — one `sin` and one `cos` per pair — so `i` ranges from `0` up to `d_model/2 - 1` (i.e., `0` to `255` for a 512-dim embedding), and each value of `i` fills in **two** of the 512 slots: one even-indexed slot (`2i`) using `sin`, and the very next odd-indexed slot (`2i+1`) using `cos`.
+
+```
+Embedding dimension index:  0    1    2    3    4    5   ...  510  511
+                            sin  cos  sin  cos  sin  cos ...  sin  cos
+                            i=0  i=0  i=1  i=1  i=2  i=2 ...  i=254 i=254
+```
+
+So `i` is not the same thing as the dimension index itself — it's more like "which frequency band" you're generating, and each `i` produces one sin/cos pair that lands in two adjacent dimension slots.
+
+## Putting `pos` and `i` together — what the formula actually computes
+
+For a *given token* (fixed `pos`) and a *given dimension pair* (fixed `i`), the formula computes a wave value based on how far along the sequence that token is:
+
+```
+value = sin( pos / 10000^(2i / d_model) )
+```
+
+- **Small `i`** (early dimension pairs) → the divisor `10000^(2i/d_model)` is close to 1 → the sine wave oscillates **fast** as `pos` increases (changes a lot between adjacent positions)
+- **Large `i`** (later dimension pairs) → the divisor becomes huge → the sine wave oscillates **very slowly** as `pos` increases (barely changes between adjacent positions, but changes noticeably over long ranges)
+
+This is the whole trick: by stacking many sine/cosine waves of different frequencies (controlled by `i`) across the embedding dimensions, each position ends up with a **unique combination of wave values** — like a fingerprint — that a model can learn to interpret as "this token is near the start / middle / end" or "this token is N positions away from that one."
+
+## Concrete tiny example
+
+Say `d_model = 4` (unrealistically small, just for illustration), so `i` only takes values `0` and `1`:
+
+For token at `pos = 3`:
+```
+dim 0 (i=0, sin): sin(3 / 10000^(0/4)) = sin(3/1)     = sin(3)
+dim 1 (i=0, cos): cos(3 / 10000^(0/4)) = cos(3/1)     = cos(3)
+dim 2 (i=1, sin): sin(3 / 10000^(2/4)) = sin(3/100)   = sin(0.03)
+dim 3 (i=1, cos): cos(3 / 10000^(2/4)) = cos(3/100)   = cos(0.03)
+```
+
+Notice dims 0–1 (small `i`) swing through a full sine cycle quickly as `pos` changes, while dims 2–3 (larger `i`) barely move — they're slow, long-wavelength signals. Every position from 0 to 7 gets its own distinct 4-number vector like this, and that vector gets **added directly to the token's word embedding** before it enters the transformer, giving the model positional information it otherwise has no way to know (since attention itself has no inherent sense of order).
+
 ### Why it's done *after* the embedding lookup (not before, not instead of)
 1. The embedding table's job is to encode **what the token means** (its identity/semantics). The positional encoding's job is to encode **where it is**. These are two orthogonal pieces of information, and addition lets the model carry both simultaneously in the same vector without needing a separate pathway.
 2. It has to happen *after* embedding lookup because positional encoding is added **elementwise** to the embedding vector — you need the embedding vector to already exist before you can add anything to it:
