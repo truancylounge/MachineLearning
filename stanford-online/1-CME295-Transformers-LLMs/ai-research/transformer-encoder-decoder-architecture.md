@@ -307,7 +307,7 @@ So in cross-attention, the decoder generates a Query ("what am I trying to figur
 **Yes.** Every decoder layer has its own FFN, structurally identical to the encoder's (Section 7) — expand → non-linear activation → project down, wrapped in a residual connection and LayerNorm. It's applied *after* cross-attention, giving the decoder the same "private processing" capability the encoder has, now operating on representations that have absorbed both (a) what's been generated so far and (b) relevant context pulled from the source sentence.
 
 **Full decoder layer, in order:**
-$$\text{Masked Self-Attention} \rightarrow \text{Add\&Norm} \rightarrow \text{Cross-Attention} \rightarrow \text{Add\&Norm} \rightarrow \text{FFN} \rightarrow \text{Add\&Norm}$$
+$$\text{Masked Self-Attention} \rightarrow \text{Add and Norm} \rightarrow \text{Cross-Attention} \rightarrow \text{Add and Norm} \rightarrow \text{FFN} \rightarrow \text{Add and Norm}$$
 
 ---
 
