@@ -40,14 +40,17 @@
 
 ## Tokenization
 - Models don't really understand text they understand numbers. So we need to process text and make it quantifiable for models to consume.
-- Info [Tokenizers](./ai-research/tokenizers.md).
-- Info [Token Similarity Algorithms](./ai-research/token-similarity.md)
+- Info [Tokenizers](ai-research/transformers/tokenizers.md).
+- Info [Token Similarity Algorithms](ai-research/transformers/token-similarity.md)
 - Traditional NLP we use cosine similarity and not dot product normalized by the magnitudes of vectors to compare two vectors (Tf-Idf, bag-of-words, LSA, etc.) is because the semantic information is encoded only in the direction of a vector, not in its magnitude.
 - As these tokens are generated we need to represent these tokens (word representation). **Cosine Similarity** is used to check how close in  meaning different tokens are to each other
   - **One Hot Encoding (OHE)**
     - With One hot encoding when we represent tokens they will be orthogonal to each other i.e. we can't figure out similarity between tokens
   - Word2Vec
-- Info [Embeddings/ Generate Word Representations](./ai-research/token-embedding-generation.md)
+- Info [Embeddings/ Generate Word Representations](ai-research/transformers/token-embedding-generation.md)
+
+## SelfAttention
+- Each token is attending to all other tokens in the sequence thorugh a me
 
 ## Interesting Discussions
 <details>
