@@ -1,4 +1,5 @@
-Great question — let's build this up properly, the way I'd walk a student through it in office hours: starting from the problem it solves, through the mechanics, to a worked numerical example, and finally how it's assembled into the full transformer block.
+# Synopsis
+What problem it solves, through the mechanics, to a worked numerical example, and finally how it's assembled into the full transformer block.
 
 ## 1. The problem self-attention solves
 
