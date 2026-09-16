@@ -53,6 +53,7 @@
 - [Self Attention Intro](ai-research/transformers/self-attention.md)
 - Instead of passing information step-by-step through a chain, let **every token directly look at every other token in the sequence, all at once**, and decide how much to "pay attention to" each one. 
 - Distance in the sequence no longer matters — token 1 can attend to token 50 just as easily as to token 2. And since every token's attention computation is independent of the others, it's fully parallelizable.
+ 
 
 - Each token is attending to all other tokens in the sequence thorugh a me
 
