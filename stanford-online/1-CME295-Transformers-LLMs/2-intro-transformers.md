@@ -55,7 +55,7 @@
 - Distance in the sequence no longer matters — token 1 can attend to token 50 just as easily as to token 2. And since every token's attention computation is independent of the others, it's fully parallelizable.
  
 
-- Each token is attending to all other tokens in the sequence thorugh a me
+- Each token is attending to all other tokens in the sequence through
 
 ## Interesting Discussions
 <details>
